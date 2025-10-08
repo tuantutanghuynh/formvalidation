@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="container">
+        <h1>Đăng nhập hệ thống</h1>
+        <p class="subttle">Form 2 trong bộ sưu tập - học validation và sự kiện onsubmit</p>
+
+        <!--Section login form-->
+        <form id="loginForm" novalidate>
+            <div class="form-group">
+                <label for="username">Tên đăng nhập</label>
+                <input type="text" id="username" name="username" placeholder="Nhập tên đăng nhập" required>
+                <div class="error" id="usernameError"></div>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Mật khẩu</label>
+                <div class="password-row">
+                    <input type="password" id="password" name="password" placeholder="Nhập mật khẩu" required>
+                    <button type="button" class="toggle" id="togglePassword" title="Hiện mật khẩu">👁️</button>
+                </div>
+                <div class="error" id="passwordError"></div>
+            </div>
+
+            <div class="form-group inline">
+                <label><input type="checkbox" id="rememberMe" />Ghi nhớ đăng nhập </label>
+            </div>
+
+            <div class="actions">
+                <button type="submit" class="btn">Đăng nhập</button>
+                <button type="reset" class="btn secondary">Làm mới</button>
+            </div>
+
+        </form>
+        <p class="hint">Chưa có tài khoản? <a href="#"> Đăng ký ngay</a></p>
+
+    </main>
+    <script src="./script.js" defer></script>
+</body>
+
+</html>
